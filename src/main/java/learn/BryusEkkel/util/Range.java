@@ -1,28 +1,29 @@
 package learn.BryusEkkel.util;
 
 public class Range {
+    // Генерирование серии [0..n]
     public static int[] range(int i) {
         int[] result = new int[i];
-        for (int j = 0; j < i; j++) {
+        for (int j = 0; j < i; j++)
             result[j] = j;
-        }
         return result;
     }
 
-    public static int[] range(int begin, int end) {
-        int length = end - begin;
+    // Генерирование серии [start..end]
+    public static int[] range(int start, int end) {
+        int length = end - start;
         int[] result = new int[length];
-        for (int i = 0, j = begin; i < length; i++, j++) {
-            result[i] = j;
+        for (int i = 0; i < length; i++) {
+            result[i] = start + i;
         }
         return result;
     }
-
-    public static int[] range(int begin, int end, int step) {
-        int length = (end - begin) / step;
+// Генерировнаие серии [start..end] с приращенем step
+    public static int[] range(int start, int end, int step) {
+        int length = (end - start) / step;
         int[] result = new int[length];
-        for (int i = 0, j = begin; i < length; i++, j += step) {
-            result[i] = j;
+        for (int i = 0; i < length; i++) {
+            result[i] = start + (i * step);
         }
         return result;
     }
