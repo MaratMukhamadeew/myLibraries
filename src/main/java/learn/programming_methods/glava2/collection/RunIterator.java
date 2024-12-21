@@ -8,8 +8,7 @@ public class RunIterator {
         ArrayList<Order> orders = new ArrayList<>(Arrays.asList(
                 new Order(231, 12.f),
                 new Order(389, 2.9f),
-                new Order(217, 1.7f)
-        ));
+                new Order(217, 1.7f)));
         System.out.println(FindOrder.findBiggerAmountOrder(10f, orders));
     }
 }

@@ -1,6 +1,6 @@
 package learn.programming_methods.glava2.collection;
 
-public class Order {
+public class Order implements Comparable<Order> {
     private int orderId;
     private float amount;
 
@@ -16,7 +16,10 @@ public class Order {
     public float getAmount() {
         return amount;
     }
-
+    @Override
+    public int compareTo(Order other) {
+        return Integer.compare(this.orderId, other.orderId);
+    }
     @Override
     public String toString() {
         return "Order{" +

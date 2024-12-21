@@ -31,8 +31,10 @@ public class UncheckCheckRun {
             System.out.println("Order: " + order);
         }
 
-        ArrayList<Item> items = new ArrayList<>(Arrays.asList(new Item(1,1.1f,"qqq"), new Item(2,2.2f,"www")
-                , new Item(3,3.3f,"eee")));
+        ArrayList<Item> items = new ArrayList<>(Arrays.asList(
+                new Item(1,1.1f,"qqq"),
+                new Item(2,2.2f,"www"),
+                new Item(3,3.3f,"eee")));
         for (Item item : items) {
             System.out.println("Item: " + item);
         }
