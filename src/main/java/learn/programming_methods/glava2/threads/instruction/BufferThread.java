@@ -2,7 +2,7 @@ package learn.programming_methods.glava2.threads.instruction;
 
 public class BufferThread {
     public static int counter = 0;
-    static StringBuffer sb = new StringBuffer();
+    static final StringBuffer sb = new StringBuffer();
     public static void main(String[] args) {
         new Thread(() -> {
             synchronized (sb) {
