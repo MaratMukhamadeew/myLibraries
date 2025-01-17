@@ -15,10 +15,21 @@ public class Main {
 //        Comparator<Cat> comp = new CatWeightComparator();
 //        comp = NullFriendlyComparator.rangeNullFirst(comp);
 
-        Comparator<Cat> comp = NullFriendlyComparator.rangeNullFirst(new CatWeightComparator());
+//        Comparator<Cat> comp = NullFriendlyComparator.rangeNullFirst(new CatWeightComparator());
+//        Comparator<Cat> comp = NullFriendlyComparator.rangeNullFirst(new CatNameComparator());
+
+        Comparator<Cat> comp = NullFriendlyComparator.rangeNullFirst(Comparator.comparingInt(Cat::getWeight));
+        Comparator<Cat> compName = NullFriendlyComparator.rangeNullFirst(Comparator.comparing(Cat::getName));
 
 
         Arrays.sort(cats, comp);
+
+        for (Cat cat : cats) {
+            System.out.println(cat);
+        }
+        System.out.println();
+
+        Arrays.sort(cats, compName);
 
         for (Cat cat : cats) {
             System.out.println(cat);
