@@ -1,4 +1,4 @@
-package practice.javaRush.task1420;
+package practice.javaRush.tasks.tasks14__.task1420;
 
 import java.io.IOException;
 import java.util.Scanner;

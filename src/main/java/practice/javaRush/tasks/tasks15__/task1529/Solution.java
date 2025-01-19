@@ -1,4 +1,4 @@
-package practice.javaRush.task1529;
+package practice.javaRush.tasks.tasks15__.task1529;
 
 import java.io.BufferedReader;
 import java.io.IOException;

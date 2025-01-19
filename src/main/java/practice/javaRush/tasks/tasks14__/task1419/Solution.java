@@ -1,4 +1,4 @@
-package practice.javaRush.task1419;
+package practice.javaRush.tasks.tasks14__.task1419;
 
 import java.io.*;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package practice.javaRush.task1529;
+package practice.javaRush.tasks.tasks15__.task1529;
 
 public class Plane implements CanFly {
     private int numberOfPassengers;
