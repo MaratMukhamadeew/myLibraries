@@ -2,7 +2,9 @@ package practice;
 
 public class Sample {
     public static void main(String[] args) {
-
+        print2();
+        print3();
+        print4();
     }
 
     public static void print2() {
