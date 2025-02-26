@@ -1,5 +1,6 @@
 package learn.programming_methods.glava3.data.main;
 
+import learn.programming_methods.glava3.data.connect.ConnectorDB;
 import learn.programming_methods.glava3.data.subject.Abonent;
 
 import java.sql.*;
@@ -7,17 +8,9 @@ import java.util.ArrayList;
 
 public class SimpleJDBCRunner {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        String url = "jdbc:postgresql://localhost:5432/testphones";
-//        Properties prop = new Properties();
-//        prop.put("login", "postgres");
-//        prop.put("password", "postgres");
-//        prop.put("autoReconnect", "true");
-//        prop.put("characterEncoding", "UTF-8");
-//        prop.put("useUnicode", "true");
         Connection cn = null;
-//        Class.forName("org.postgresql.Driver");
         try { // 1 блок
-            cn = DriverManager.getConnection(url, "postgres", "postgres");
+            cn = ConnectorDB.getConnection();
             Statement st = null;
             try { // 2 блок
                 st = cn.createStatement();
