@@ -1,7 +1,10 @@
-package learn.Tsymbaliuk.javacore.StreamAPI.sample2;
+package learn.Tsymbaliuk.javacore.StreamAPI.part1.sample3;
+
+import learn.Tsymbaliuk.javacore.StreamAPI.part1.sample2.Cat;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,11 +15,8 @@ public class Main {
 
         List<Cat> list = List.of(cat1, cat2, cat3, cat4);
 
-        int weight = 5;
-
-        List<Cat> result = list.stream()
-                .filter(cat -> cat.getWeight() >= weight)
-                .collect(Collectors.toList());
+        Stream<Cat> catToName = list.stream().filter(cat -> cat.getName().length() > 5);
+        List<Cat> result = catToName.collect(Collectors.toList());
 
         System.out.println(result);
     }

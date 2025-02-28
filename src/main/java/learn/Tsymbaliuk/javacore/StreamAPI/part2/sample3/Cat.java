@@ -1,9 +1,15 @@
-package learn.Tsymbaliuk.javacore.StreamAPI.sample2;
+package learn.Tsymbaliuk.javacore.StreamAPI.part2.sample3;
+
+import java.util.Objects;
 
 public class Cat {
     private String name;
     private int weight;
     private String color;
+
+    public Cat() {
+        super();
+    }
 
     public Cat(String name, int weight, String color) {
         this.name = name;
@@ -11,11 +17,7 @@ public class Cat {
         this.color = color;
     }
 
-    public Cat() {
-    }
-
     public String getName() {
-//        System.out.println(name);
         return name;
     }
 
@@ -24,7 +26,6 @@ public class Cat {
     }
 
     public int getWeight() {
-//        System.out.println(weight);
         return weight;
     }
 
@@ -38,6 +39,19 @@ public class Cat {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cat cat = (Cat) o;
+        return weight == cat.weight && Objects.equals(name, cat.name) && Objects.equals(color, cat.color);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, weight, color);
     }
 
     @Override

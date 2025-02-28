@@ -1,4 +1,4 @@
-package learn.Tsymbaliuk.javacore.StreamAPI.sample1;
+package learn.Tsymbaliuk.javacore.StreamAPI.part1.sample1;
 
 import java.util.List;
 

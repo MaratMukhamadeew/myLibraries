@@ -1,4 +1,4 @@
-package learn.Tsymbaliuk.javacore.StreamAPI.sample4;
+package learn.Tsymbaliuk.javacore.StreamAPI.part1.sample4;
 
 import java.io.IOException;
 import java.nio.file.Files;

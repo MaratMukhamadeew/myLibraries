@@ -1,6 +1,6 @@
-package learn.Tsymbaliuk.javacore.StreamAPI.sample8;
+package learn.Tsymbaliuk.javacore.StreamAPI.part1.sample8;
 
-import learn.Tsymbaliuk.javacore.StreamAPI.sample2.Cat;
+import learn.Tsymbaliuk.javacore.StreamAPI.part1.sample2.Cat;
 
 import java.util.Comparator;
 import java.util.List;
