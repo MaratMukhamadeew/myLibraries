@@ -1,14 +1,14 @@
 package learn.programming_methods.glava3.data.subject;
 
-public class Abonent extends Entity {
+public class Payment extends Entity {
     private String name;
     private int phone;
 
-    public Abonent() {
+    public Payment() {
         super();
     }
 
-    public Abonent(int id, String name, int phone) {
+    public Payment(int id, String name, int phone) {
         super(id);
         this.phone = phone;
         this.name = name;
@@ -32,6 +32,6 @@ public class Abonent extends Entity {
 
     @Override
     public String toString() {
-        return "Abonent { id = " + super.getId() + ", phone = " + phone + ", name = '" + name + " }";
+        return "Payment { id = " + super.getId() + ", phone = " + phone + ", name = '" + name + " }";
     }
 }
