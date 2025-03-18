@@ -11,6 +11,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class JavaExcelApp {
+    private static final String PATH = "C:\\Users\\marat\\myLibraries\\src\\main\\resources\\excel\\vysokomornyi\\my2.xls";
     public static void main(String[] args) throws IOException {
         Workbook wb = new HSSFWorkbook();
         Sheet sheet0 = wb.createSheet("Издатели");
@@ -32,7 +33,7 @@ public class JavaExcelApp {
 
 
 
-        FileOutputStream fos = new FileOutputStream("my.xls");
+        FileOutputStream fos = new FileOutputStream(PATH);
 
         wb.write(fos);
         fos.close();

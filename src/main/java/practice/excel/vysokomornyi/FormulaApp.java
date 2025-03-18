@@ -10,8 +10,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class FormulaApp {
+    private static final String PATH = "C:\\Users\\marat\\myLibraries\\src\\main\\resources\\excel\\vysokomornyi\\Формулы.xls";
     public static void main(String[] args) throws IOException {
-        try (FileOutputStream fos = new FileOutputStream("Формулы.xls"); Workbook book = new HSSFWorkbook()) {
+        try (FileOutputStream fos = new FileOutputStream(PATH); Workbook book = new HSSFWorkbook()) {
             Sheet sheet = book.createSheet("Формулы");
             Row row = sheet.createRow(0);
 

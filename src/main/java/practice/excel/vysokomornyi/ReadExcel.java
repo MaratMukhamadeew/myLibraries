@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 public class ReadExcel {
+    private static final String PATH = "C:\\Users\\marat\\myLibraries\\src\\main\\resources\\excel\\vysokomornyi\\my.xls";
     public static void main(String[] args) {
 //        try (FileInputStream fis = new FileInputStream("C:\\Users\\marat\\Desktop\\Шабашка\\test2.xls")) {
 //            Workbook wb = new HSSFWorkbook(fis);
@@ -17,7 +18,7 @@ public class ReadExcel {
 //            e.printStackTrace();
 //        }
 
-        try (FileInputStream stream = new FileInputStream("my.xls")) {
+        try (FileInputStream stream = new FileInputStream(PATH)) {
             Workbook workbook = new HSSFWorkbook(stream);
             printAllCells(workbook.getSheetAt(0));
         } catch (IOException e) {
