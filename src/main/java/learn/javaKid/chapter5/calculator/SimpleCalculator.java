@@ -52,5 +52,6 @@ public class SimpleCalculator {
         // Задаём размер и делаем фрейм видимым
         frame.setSize(400,100);
         frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }

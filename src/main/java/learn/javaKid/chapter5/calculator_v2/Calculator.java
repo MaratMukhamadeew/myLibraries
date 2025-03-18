@@ -87,6 +87,7 @@ public class Calculator {
 
         // Отображаем окно
         frame.setVisible(true);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         var engine = new CalculatorEngine_v2(this);
         for (JButton button : buttons) {
