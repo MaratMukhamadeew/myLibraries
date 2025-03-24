@@ -323,7 +323,6 @@ class HelpPanel extends Panel {
         add(textArea);
     }
 }
-
 // Класс обработчика первой кнопки:
 class ButtonOneHandler implements ActionListener {
     // Панель с кнопками:
