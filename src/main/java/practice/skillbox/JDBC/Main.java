@@ -8,8 +8,12 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class Main {
@@ -24,26 +28,41 @@ public class Main {
         SessionFactory sessionFactory = getSessionFactory();
         Session session = sessionFactory.openSession();
 
-        Transaction transaction =  session.beginTransaction();
+        String hql = "From " + Course.class.getSimpleName() + " Where price > 120000";
+        List<Course> courses = session.createQuery(hql).getResultList();
+        for (Course course : courses) {
+            System.out.println(course.getName() + " - " + course.getPrice());
+        }
 
-        Course course = session.get(Course.class,1);
-        System.out.println(course.getTeacher().getName());
+//        CriteriaBuilder builder = session.getCriteriaBuilder();
+//        CriteriaQuery<Course> query = builder.createQuery(Course.class);
+//        Root<Course> root = query.from(Course.class);
+//        query.select(root).where(builder.greaterThan(root.get("price"),100000)).orderBy(builder.desc(root.get("price")));
+//
+//        List<Course> courses = session.createQuery(query).setMaxResults(5).getResultList();
+//
+//        for (Course course : courses) {
+//            System.out.println(course.getName() + " - " + course.getPrice());
+//        }
 
-        transaction.commit();
         sessionFactory.close();
     }
 
 
     private static void hibernateMethod() {
-        ArrayList<Course> list = new ArrayList<>();
-
         SessionFactory sessionFactory = getSessionFactory();
         Session session = sessionFactory.openSession();
+        CriteriaBuilder builder = session.getCriteriaBuilder();
+        CriteriaQuery<Course> query = builder.createQuery(Course.class);
+        Root<Course> root = query.from(Course.class);
+        query.select(root);
 
-        for (int i = 1; i < 15; i++) {
-            list.add(session.get(Course.class, i));
+        List<Course> courses = session.createQuery(query).getResultList();
+//        courses.forEach(System.out::println);
+
+        for (Course course : courses) {
+            System.out.println(course.getName() + " - " + course.getTeacher().getName());
         }
-        list.forEach(System.out::println);
 
         sessionFactory.close();
     }

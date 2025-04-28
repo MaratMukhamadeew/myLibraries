@@ -21,6 +21,7 @@
 
         <mapping class="practice.skillbox.JDBC.Course"></mapping>
         <mapping class="practice.skillbox.JDBC.Teacher"></mapping>
+        <mapping class="practice.skillbox.JDBC.Student"></mapping>
 
     </session-factory>
 </hibernate-configuration>
