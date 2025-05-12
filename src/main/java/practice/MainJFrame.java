@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 
-public class Main {
+public class MainJFrame {
     public static void main(String[] args) {
         JFrame frame = getFrame();
         frame.add(new MyComponent());

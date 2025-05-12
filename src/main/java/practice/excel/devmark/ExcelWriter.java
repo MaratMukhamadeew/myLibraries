@@ -39,14 +39,11 @@ public class ExcelWriter {
         var header = sheet.createRow(0);
 
         var headerStyle = workbook.createCellStyle();
-        headerStyle.setFillForegroundColor(IndexedColors.GREY_25_PERCENT.getIndex());
-        headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 
         var font = workbook.createFont();
         font.setFontName("Arial");
         font.setFontHeightInPoints((short) 14);
         font.setBold(true);
-        headerStyle.setFont(font);
 
         var headerCell = header.createCell(0);
         headerCell.setCellValue("Имя");
@@ -62,11 +59,6 @@ public class ExcelWriter {
     }
 
     private void createCell(XSSFWorkbook workbook, Sheet sheet) {
-        var style = workbook.createCellStyle();
-        style.setWrapText(true);
-        var createHelper = workbook.getCreationHelper();
-        style.setDataFormat(createHelper.createDataFormat().getFormat("dd.mm.yyyy"));
-        sheet.setDefaultColumnStyle(1, style);
 
         for (var i = 0; i < CLIENTS.size(); i++) {
             var client = CLIENTS.get(i);

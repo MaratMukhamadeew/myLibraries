@@ -21,14 +21,14 @@ public class NumberInfo {
     }
 
     public static void main(String[] args) {
-        Number[] num = {new Integer(7), 71, 3.14f, 7.2};
-        for (Number n : num) {
-            viewNum(n);
-        }
-        viewNum(new Integer(8));
-        viewNum(81);
-        viewNum(4.14f);
-        viewNum(new Float(5.15));
-        viewNum(8.2);
+//        Number[] num = {new Integer(7), 71, 3.14f, 7.2};
+//        for (Number n : num) {
+//            viewNum(n);
+//        }
+//        viewNum(new Integer(8));
+//        viewNum(81);
+//        viewNum(4.14f);
+//        viewNum(new Float(5.15));
+//        viewNum(8.2);
     }
 }

@@ -25,7 +25,7 @@ public class StringToInt {
             System.out.println("Возвращает int " + Integer.parseInt(str)); // Возвращает int
             System.out.println("Возвращает Integer " + Integer.valueOf(str)); // Возвращает Integer
             System.out.println("Возвращает Integer " + Integer.decode(str)); // Возвращает Integer
-            System.out.println("Создаёт Integer " + new Integer(str)); // Создаёт Integer, для преобразования применяется редко
+//            System.out.println("Создаёт Integer " + new Integer(str)); // Создаёт Integer, для преобразования применяется редко
             System.out.println();
         } catch (NumberFormatException e) {
             System.err.println("Неверный формат числа " + e);

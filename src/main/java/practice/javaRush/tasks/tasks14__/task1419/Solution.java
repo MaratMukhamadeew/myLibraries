@@ -39,11 +39,11 @@ public class Solution {
         } catch (IOException e) {
             exceptions.add(e);
         }
-        try {
-            new Long("xyz");
-        } catch (NumberFormatException e) {
-            exceptions.add(e);
-        }
+//        try {
+//            new Long("xyz");
+//        } catch (NumberFormatException e) {
+//            exceptions.add(e);
+//        }
         try {
             Object obj = "Java Exception";
             Integer number = (Integer) obj;

@@ -10,13 +10,13 @@ class Book {
     void checkIn() {
         checkedOut = false;
     }
-    @Override
-    public void finalize() {
-        if (checkedOut)
-            System.out.println("Ошибка: checkedOut");
-        // Обычно это делается так:
-        // super.finalize();  Вывов версии базового класса
-    }
+//    @Override
+//    public void finalize() {
+//        if (checkedOut)
+//            System.out.println("Ошибка: checkedOut");
+//        // Обычно это делается так:
+//        // super.finalize();  Вывов версии базового класса
+//    }
 }
 public class TerminationCondition {
     public static void main(String[] args) {

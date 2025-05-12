@@ -14,7 +14,7 @@ public class Runner {
         Message ob3 = new Message();
         ob3 = ob1;
         System.out.println(ob3.getValue());
-        ob3.setValue(new Byte((byte) 1));
+//        ob3.setValue(new Byte((byte) 1));
         System.out.println(ob3);
         ob3.setValue("Java SE 7");
         System.out.println(ob3);

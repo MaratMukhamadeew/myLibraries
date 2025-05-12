@@ -2,6 +2,8 @@ package learn.shildt.lang;
 
 // Продемонстрировать применение методов totalMemory(), freeMemory(), и gc()
 
+import java.util.Arrays;
+
 public class MemoryDemo {
     public static void main(String[] args) {
         Runtime runtime = Runtime.getRuntime();
@@ -15,16 +17,14 @@ public class MemoryDemo {
         System.out.println("Свободной памяти после очистки: " + mem1);
 
         for (int i = 0; i < someInt.length; i++) {
-            someInt[i] = new Integer(i); // Выделить память для объектов Integer
+            someInt[i] = i; // Выделить память для объектов Integer
         }
         mem2 = runtime.freeMemory();
         System.out.println("Свободной памяти после выделения: " + mem2);
         System.out.println("Использовано памяти для выделения: " + (mem1 - mem2));
 
         // Отбросить Integers
-        for (int i = 0; i < someInt.length; i++) {
-            someInt[i] = null;
-        }
+        Arrays.fill(someInt, null);
         runtime.gc();
         mem2 = runtime.freeMemory();
         System.out.println("Свободной памяти после очистки отвергнутых объектов типа Integer: " + mem2);

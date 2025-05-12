@@ -16,7 +16,7 @@ public class DemoOverload {
         printArgCount(7, "No", true, null);
         printArgCount(i, i, i);
         printArgCount(i, 4, 71);
-        printArgCount(i);
+//        printArgCount(i);
 //        printArgCount(5, 7);
     }
 }

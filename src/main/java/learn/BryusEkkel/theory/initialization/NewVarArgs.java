@@ -12,8 +12,8 @@ public class NewVarArgs {
     }
 
     public static void main(String[] args) {
-        // Можно передать отдельные элемеенты:
-        printArray(new Integer(47), new Float(3.14), new Double(11.11));
+        // Можно передать отдельные элементы:
+//        printArray(new Integer(47), new Float(3.14), new Double(11.11));
         printArray(47, 3.14F, 11.11);
         printArray("раз", "два", "три");
         printArray(new A(), new A(), new A());

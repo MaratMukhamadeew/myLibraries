@@ -15,7 +15,7 @@ public class VarArgs {
 
     public static void main(String[] args) {
         printArray(new Object[]{
-                new Integer(47), new Float(3.14), new Double(11.11)
+//                new Integer(47), new Float(3.14), new Double(11.11)
         });
         printArray(new Object[]{
                 "раз", "два", "три"
